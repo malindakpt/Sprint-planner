@@ -1,27 +1,28 @@
-<td>
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Jira ID" value="">
-  </mat-form-field>
-</td>
-<td>
-  <mat-form-field>
-    <mat-select placeholder="Task Type">
-      <mat-option *ngFor="let taskType of taskTypes" [value]="taskType.value">
-        {{ taskType.viewValue }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</td>
-<td>
-  <mat-form-field>
-    <mat-select placeholder="Sub Product">
-      <mat-option *ngFor="let subProduct of subProducts" [value]="subProduct.value">
-        {{ subProduct.viewValue }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</td>
-<td>
+<div *ngIf='isEnabled;' class='main_task'>
+  <div class='cell'>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Jira ID" value="">
+    </mat-form-field>
+  </div>
+  <div class='cell'>
+    <mat-form-field>
+      <mat-select placeholder="Task Type">
+        <mat-option *ngFor="let taskType of taskTypes" [value]="taskType.value">
+          {{ taskType.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class='cell'>
+    <mat-form-field>
+      <mat-select placeholder="Sub Product">
+        <mat-option *ngFor="let subProduct of subProducts" [value]="subProduct.value">
+          {{ subProduct.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class='cell'>
     <mat-form-field>
       <mat-select placeholder="Owner">
         <mat-option *ngFor="let member of members" [value]="member.value">
@@ -29,4 +30,27 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-  </td>
+  </div>
+  <div class='cell'>
+    <mat-form-field>
+      <mat-select placeholder="Status">
+        <mat-option *ngFor="let status of statusTypes" [value]="status.value">
+          {{ status.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class='cell' >
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Remaing Time" value="">
+    </mat-form-field>
+  </div>
+  <div class='cell'>
+    <button mat-button (click)="addSubTask()">Add Sub Task</button>
+  </div>
+  <div class='cell'>
+    <button mat-button (click)="removeTask()">Remove</button>
+  </div>
+</div>
+
+

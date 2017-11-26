@@ -3,29 +3,14 @@
   <h4>
     Welcome to {{title}}!
   </h4>
-  </div>
+</div>
 
-<table>
-<tr>
-  <app-table-row></app-table-row>
-</tr>
-<tr>
-  <app-table-row></app-table-row>
-</tr>
-</table>
+<div>
+  <button mat-button (click)="addNewTask()">Add New Task</button>
+  <app-table-row *ngFor='let task of taskList'>
 
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi">
-  </mat-form-field>
+  </app-table-row>
 
-  <mat-form-field class="example-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
-  </mat-form-field>
-</form>
-
-
-<button mat-button>CLick Me</button>
-
+</div>
 
 

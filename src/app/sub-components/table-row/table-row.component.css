@@ -1,0 +1,12 @@
+.main_task{
+    background-color: rgba(193, 208, 250, 0.952);
+}
+
+.sub_task{
+    background-color: rgb(38, 0, 255);
+}
+
+.cell{
+    width:200px;
+    float: left;
+}
