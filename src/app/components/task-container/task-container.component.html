@@ -1,0 +1,9 @@
+<p>
+  task-container works!
+</p>
+
+
+<button mat-button (click)="addNewTask()">Add New Task</button>
+<div *ngFor='let ele of getTaskList()'>
+<app-task-row [task]="ele"></app-task-row>
+</div>
